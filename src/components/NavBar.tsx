@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import Logo from "../assets/logo.png"
+import React, { useState } from 'react';
+import Logo from "../assets/logo.png";
 
-type Props = {}
+type Props = {};
 
-const NavBar = (props: Props) => {
-  const [isOpen, setIsOpen] = useState(false)
+const NavBar: React.FC<Props> = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <nav className="relative bg-white shadow">
@@ -16,12 +16,12 @@ const NavBar = (props: Props) => {
 
             <div className="flex lg:hidden">
               <button x-cloak onClick={() => setIsOpen(!isOpen)} type="button" className="text-gray-500 hover:text-gray-60 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
-                <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${isOpen ? "hidden" : "visible"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${isOpen ? "hidden" : "visible"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
                 </svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${isOpen ? "visible" : "hidden"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${isOpen ? "visible" : "hidden"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
@@ -39,7 +39,7 @@ const NavBar = (props: Props) => {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
