@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
 import HomeImage from '../assets/Home.svg';
 
 type Props = {};
@@ -7,7 +6,6 @@ type Props = {};
 const Home: React.FC<Props> = () => {
   return (
     <div>
-      <NavBar />
       <header className="bg-white">
         <div className="container px-6 py-16 mx-auto">
           <div className="items-center lg:flex">
